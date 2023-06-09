@@ -26,8 +26,11 @@ void main() {
   // final String name2 = 'nico';
 
   // 1.5 Late Variables
-  late final String name;
-  // do something, go to api
-  name = '';
-  print(name);
+  // late final String name;
+  // // do something, go to api
+  // name = '';
+  // print(name);
+
+  // 1.6 Constant Variables
+  const max_allowed_price = 120;
 }
