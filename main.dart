@@ -22,8 +22,12 @@ void main() {
   // }
   // nico?.isNotEmpty;
 
+  // final name = 'nico';
+  // final String name2 = 'nico';
 
-  // 1.4 Final Variables
-  final name = 'nico';
-  final String name2 = 'nico';
+  // 1.5 Late Variables
+  late final String name;
+  // do something, go to api
+  name = '';
+  print(name);
 }
