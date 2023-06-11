@@ -47,8 +47,18 @@ void main() {
   // print(numbers);
 
   // 2.2 String Interpolation
-  var name = 'nico';
+/*   var name = 'nico';
   var age = 10;
   var greeting = "hello $name I\'m ${age + 2}";
-  print(greeting);
+  print(greeting); */
+
+  // 2.3 Collection For
+  var oldFriends = ['nico', 'lynn'];
+  var newFriends = [
+    'lewis',
+    'ralph',
+    'darren',
+    for (var friend in oldFriends) "💝 $friend",
+  ];
+  print(newFriends);
 }
