@@ -32,5 +32,17 @@ void main() {
   // print(name);
 
   // 1.6 Constant Variables
-  const max_allowed_price = 120;
+  // const max_allowed_price = 120;
+
+  // 2.1 Lists
+  var giveMeFive = true;
+  var numbers = [
+    1,
+    2,
+    3,
+    4,
+    if (giveMeFive) 5,
+  ];
+  numbers.add(1);
+  print(numbers);
 }
