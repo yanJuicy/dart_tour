@@ -63,34 +63,39 @@ void main() {
   // print(newFriends);
 
   // 2.4 Maps
-  var palyer = {
-    'name': 'nico',
-    'xp': 19.99,
-    'supperpower': false,
-  };
+  // var palyer = {
+  //   'name': 'nico',
+  //   'xp': 19.99,
+  //   'supperpower': false,
+  // };
+  // Map<int, bool> player2 = {
+  //   1: true,
+  //   2: false,
+  //   3: true,
+  // };
+  // Map<List<int>, bool> player = {
+  //   [1, 2, 3, 5]: true,
+  // };
+  // List<Map<String, Object>> players3 = [
+  //   {
+  //     'name': 'nico',
+  //     'xp': 199993,
+  //   },
+  //   {
+  //     'name': 'nico',
+  //     'xp': 199993,
+  //   },
+  //   {
+  //     'name': 'nico',
+  //     'xp': 199993,
+  //   },
+  // ];
 
-  Map<int, bool> player2 = {
-    1: true,
-    2: false,
-    3: true,
-  };
-
-  Map<List<int>, bool> player = {
-    [1, 2, 3, 5]: true,
-  };
-
-  List<Map<String, Object>> players3 = [
-    {
-      'name': 'nico',
-      'xp': 199993,
-    },
-    {
-      'name': 'nico',
-      'xp': 199993,
-    },
-    {
-      'name': 'nico',
-      'xp': 199993,
-    },
-  ];
+  // 2.5 Sets
+  var numbers = {1, 2, 3, 4};
+  Set<int> numbers2 = {1, 2, 3, 4};
+  numbers.add(1);
+  numbers.add(1);
+  numbers.add(1);
+  print(numbers);
 }
