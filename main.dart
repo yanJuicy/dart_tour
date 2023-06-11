@@ -35,14 +35,20 @@ void main() {
   // const max_allowed_price = 120;
 
   // 2.1 Lists
-  var giveMeFive = true;
-  var numbers = [
-    1,
-    2,
-    3,
-    4,
-    if (giveMeFive) 5,
-  ];
-  numbers.add(1);
-  print(numbers);
+  // var giveMeFive = true;
+  // var numbers = [
+  //   1,
+  //   2,
+  //   3,
+  //   4,
+  //   if (giveMeFive) 5,
+  // ];
+  // numbers.add(1);
+  // print(numbers);
+
+  // 2.2 String Interpolation
+  var name = 'nico';
+  var age = 10;
+  var greeting = "hello $name I\'m ${age + 2}";
+  print(greeting);
 }
