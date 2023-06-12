@@ -153,11 +153,34 @@
 //   return "Hi ${userInfo['name']}";
 // }
 
-
 // 4 Class
+// class Player {
+//   final String name = 'nico';
+//   int xp = 1500;
+//   void sayHello() {
+//     print("Hi my name is $name");
+//   }
+// }
+// void main() {
+//   var player = Player();
+//   player.xp = 2000;
+//   player.sayHello();
+// }
+
+// 4.1 Constructors
 class Player {
-  final String name = 'nico';
-  int xp = 1500;
+  // late final String name;
+  // late int xp;
+
+  // Player(String name, int xp) {
+  //   this.name = name;
+  //   this.xp = xp;
+  // }
+
+  final String name;
+  int xp;
+
+  Player(this.name, this.xp);
 
   void sayHello() {
     print("Hi my name is $name");
@@ -165,7 +188,6 @@ class Player {
 }
 
 void main() {
-  var player = Player();
-  player.xp = 2000;
+  var player = Player("nico", 1500);
   player.sayHello();
 }
