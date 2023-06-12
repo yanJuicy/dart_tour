@@ -168,19 +168,38 @@
 // }
 
 // 4.1 Constructors
+// class Player {
+//   // late final String name;
+//   // late int xp;
+//   // Player(String name, int xp) {
+//   //   this.name = name;
+//   //   this.xp = xp;
+//   // }
+//   final String name;
+//   int xp;
+//   Player(this.name, this.xp);
+//   void sayHello() {
+//     print("Hi my name is $name");
+//   }
+// }
+// void main() {
+//   var player = Player("nico", 1500);
+//   player.sayHello();
+// }
+
+// 4.2 Named Constructor Paramters
 class Player {
-  // late final String name;
-  // late int xp;
-
-  // Player(String name, int xp) {
-  //   this.name = name;
-  //   this.xp = xp;
-  // }
-
   final String name;
   int xp;
+  String team;
+  int age;
 
-  Player(this.name, this.xp);
+  Player({
+    required this.name,
+    required this.xp,
+    required this.team,
+    this.age = 10,
+  });
 
   void sayHello() {
     print("Hi my name is $name");
@@ -188,6 +207,11 @@ class Player {
 }
 
 void main() {
-  var player = Player("nico", 1500);
+  var player = Player(
+    name: "nico",
+    xp: 1500,
+    team: 'blue',
+    age: 21,
+  );
   player.sayHello();
 }
