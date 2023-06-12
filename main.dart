@@ -100,13 +100,34 @@ void main() {
   // print(numbers);
 
   // 3 Defining Function
-  String sayHello(String potato) {
-    // call api
-    // do something
-    return "Hello $potato nice to meet you";
+  // String sayHello(String potato) {
+  //   // call api
+  //   // do something
+  //   return "Hello $potato nice to meet you";
+  // }
+  // num plus(num a, num b) => a + b;
+  // print(sayHello('nico'));
+
+  // 3.1 Named Parameters
+  String sayHello({
+    String name = 'anon',
+    int age = 0,
+    String country = 'wakanda',
+  }) {
+    return "Hello $name, $age, $country";
   }
 
-  num plus(num a, num b) => a + b;
+  String sayHello2({
+    required String name,
+    required int age,
+    required String country,
+  }) {
+    return "Hello $name, $age, $country";
+  }
 
-  print(sayHello('nico'));
+  print(sayHello(
+    age: 12,
+    country: 'cuba',
+    name: 'nico',
+  ));
 }
