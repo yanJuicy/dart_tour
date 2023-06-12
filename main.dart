@@ -134,14 +134,14 @@
 //   // }
 //   // print(sayHello('nico', 12));
 
-//   // 3.4 QQ Operator
-//   // String capitalizeName(String? name) => name?.toUpperCase() ?? 'ANNO';
-//   // print(capitalizeName('nico'));
-//   // print(capitalizeName(null));
-//   // String? name;
-//   // name ??= 'nico';
-//   // name ??= 'another';
-//   // print(name);
+// 3.4 QQ Operator
+// String capitalizeName(String? name) => name?.toUpperCase() ?? 'ANNO';
+// print(capitalizeName('nico'));
+// print(capitalizeName(null));
+// String? name;
+// name ??= 'nico';
+// name ??= 'another';
+// print(name);
 
 //   // 3,5 Typedef
 //   print(sayHi({"name": "nico"}));
@@ -188,11 +188,36 @@
 // }
 
 // 4.2 Named Constructor Paramters
+// class Player {
+//   final String name;
+//   int xp;
+//   String team;
+//   int age;
+//   Player({
+//     required this.name,
+//     required this.xp,
+//     required this.team,
+//     this.age = 10,
+//   });
+//   void sayHello() {
+//     print("Hi my name is $name");
+//   }
+// }
+// void main() {
+//   var player = Player(
+//     name: "nico",
+//     xp: 1500,
+//     team: 'blue',
+//     age: 21,
+//   );
+//   player.sayHello();
+// }
+
+// 4.3 Named Constructors
 class Player {
   final String name;
-  int xp;
+  int xp, age;
   String team;
-  int age;
 
   Player({
     required this.name,
@@ -201,17 +226,32 @@ class Player {
     this.age = 10,
   });
 
+  Player.createBluePlayer({
+    required String name,
+    required int age,
+  })  : this.name = name,
+        this.age = age,
+        this.team = 'blue',
+        this.xp = 0;
+
+  Player.createRedPlayer(
+    String name,
+    int age,
+  )   : this.name = name,
+        this.age = age,
+        this.team = 'red',
+        this.xp = 0;
+
   void sayHello() {
     print("Hi my name is $name");
   }
 }
 
 void main() {
-  var player = Player(
+  var player = Player.createBluePlayer(
     name: "nico",
-    xp: 1500,
-    team: 'blue',
     age: 21,
   );
-  player.sayHello();
+
+  var redPlayer = Player.createRedPlayer("nico", 21);
 }
