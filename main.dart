@@ -109,25 +109,29 @@ void main() {
   // print(sayHello('nico'));
 
   // 3.1 Named Parameters
-  String sayHello({
-    String name = 'anon',
-    int age = 0,
-    String country = 'wakanda',
-  }) {
+  // String sayHello({
+  //   String name = 'anon',
+  //   int age = 0,
+  //   String country = 'wakanda',
+  // }) {
+  //   return "Hello $name, $age, $country";
+  // }
+  // String sayHello2({
+  //   required String name,
+  //   required int age,
+  //   required String country,
+  // }) {
+  //   return "Hello $name, $age, $country";
+  // }
+  // print(sayHello(
+  //   age: 12,
+  //   country: 'cuba',
+  // ));
+
+  // 3.3 Optional Positional Parameters
+  String sayHello(String name, int age, [String? country = 'cuba']) {
     return "Hello $name, $age, $country";
   }
 
-  String sayHello2({
-    required String name,
-    required int age,
-    required String country,
-  }) {
-    return "Hello $name, $age, $country";
-  }
-
-  print(sayHello(
-    age: 12,
-    country: 'cuba',
-    name: 'nico',
-  ));
+  print(sayHello('nico', 12));
 }
