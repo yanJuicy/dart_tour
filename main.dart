@@ -135,11 +135,20 @@ void main() {
   // print(sayHello('nico', 12));
 
   // 3.4 QQ Operator
-  String capitalizeName(String? name) => name?.toUpperCase() ?? 'ANNO';
-  print(capitalizeName('nico'));
-  print(capitalizeName(null));
-  String? name;
-  name ??= 'nico';
-  name ??= 'another';
-  print(name);
+  // String capitalizeName(String? name) => name?.toUpperCase() ?? 'ANNO';
+  // print(capitalizeName('nico'));
+  // print(capitalizeName(null));
+  // String? name;
+  // name ??= 'nico';
+  // name ??= 'another';
+  // print(name);
+
+  // 3,5 Typedef
+  print(sayHi({"name": "nico"}));
+}
+
+typedef UserInfo = Map<String, String>;
+
+String sayHi(UserInfo userInfo) {
+  return "Hi ${userInfo['name']}";
 }
