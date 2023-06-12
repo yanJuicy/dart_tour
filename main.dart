@@ -92,10 +92,21 @@ void main() {
   // ];
 
   // 2.5 Sets
-  var numbers = {1, 2, 3, 4};
-  Set<int> numbers2 = {1, 2, 3, 4};
-  numbers.add(1);
-  numbers.add(1);
-  numbers.add(1);
-  print(numbers);
+  // var numbers = {1, 2, 3, 4};
+  // Set<int> numbers2 = {1, 2, 3, 4};
+  // numbers.add(1);
+  // numbers.add(1);
+  // numbers.add(1);
+  // print(numbers);
+
+  // 3 Defining Function
+  String sayHello(String potato) {
+    // call api
+    // do something
+    return "Hello $potato nice to meet you";
+  }
+
+  num plus(num a, num b) => a + b;
+
+  print(sayHello('nico'));
 }
