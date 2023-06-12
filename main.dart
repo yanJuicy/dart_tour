@@ -129,9 +129,17 @@ void main() {
   // ));
 
   // 3.3 Optional Positional Parameters
-  String sayHello(String name, int age, [String? country = 'cuba']) {
-    return "Hello $name, $age, $country";
-  }
+  // String sayHello(String name, int age, [String? country = 'cuba']) {
+  //   return "Hello $name, $age, $country";
+  // }
+  // print(sayHello('nico', 12));
 
-  print(sayHello('nico', 12));
+  // 3.4 QQ Operator
+  String capitalizeName(String? name) => name?.toUpperCase() ?? 'ANNO';
+  print(capitalizeName('nico'));
+  print(capitalizeName(null));
+  String? name;
+  name ??= 'nico';
+  name ??= 'another';
+  print(name);
 }
