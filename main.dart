@@ -258,7 +258,7 @@ void main() {
  */
 
 // 4.5 Cascade Notation
-class Player {
+/* class Player {
   String name;
   int xp;
   String team;
@@ -279,4 +279,33 @@ void main() {
     ..name = 'las'
     ..xp = 12000000
     ..team = 'blue';
+}
+ */
+
+// 4.6 Enums
+enum Team { red, blue }
+
+enum XPLevel { beginner, medium, pro }
+
+class Player {
+  String name;
+  XPLevel xp;
+  Team team;
+
+  Player({
+    required this.name,
+    required this.xp,
+    required this.team,
+  });
+
+  void sayHello() {
+    print("Hi my name is $name");
+  }
+}
+
+void main() {
+  var nico = Player(name: 'ico', xp: XPLevel.beginner, team: Team.red)
+    ..name = 'las'
+    ..xp = XPLevel.medium
+    ..team = Team.blue;
 }
