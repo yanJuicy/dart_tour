@@ -332,7 +332,7 @@ class Coach extends Human {
  */
 
 // 4.8 Inheritance
-class Human {
+/* class Human {
   final String name;
 
   Human(this.name);
@@ -364,4 +364,23 @@ void main() {
     team: Team.blue,
     name: 'nico',
   );
+} */
+
+// 4.9 Mixins
+mixin class Strong {
+  final double strengthLevel = 1500.99;
 }
+
+mixin class QuickRunner {
+  void runQuick() {
+    print("ruuuuuuuuuuun!");
+  }
+}
+
+mixin class Tall {
+  final double height = 1.99;
+}
+
+class Player with Strong, QuickRunner, Tall {}
+
+class Horse with Strong, QuickRunner {}
