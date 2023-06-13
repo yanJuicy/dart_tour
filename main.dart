@@ -283,7 +283,7 @@ void main() {
  */
 
 // 4.6 Enums
-enum Team { red, blue }
+/* enum Team { red, blue }
 
 enum XPLevel { beginner, medium, pro }
 
@@ -308,4 +308,24 @@ void main() {
     ..name = 'las'
     ..xp = XPLevel.medium
     ..team = Team.blue;
+}
+ */
+
+// 4.7 Abstract Classes
+abstract class Human {
+  void walk();
+}
+
+class Player extends Human {
+  @override
+  void walk() {
+    print("im walking");
+  }
+}
+
+class Coach extends Human {
+  @override
+  void walk() {
+    print("the coach walking");
+  }
 }
