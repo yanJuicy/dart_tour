@@ -312,7 +312,7 @@ void main() {
  */
 
 // 4.7 Abstract Classes
-abstract class Human {
+/* abstract class Human {
   void walk();
 }
 
@@ -328,4 +328,40 @@ class Coach extends Human {
   void walk() {
     print("the coach walking");
   }
+}
+ */
+
+// 4.8 Inheritance
+class Human {
+  final String name;
+
+  Human(this.name);
+
+  void sayHello() {
+    print("Hi my name is $name");
+  }
+}
+
+enum Team { blue, red }
+
+class Player extends Human {
+  final Team team;
+
+  Player({
+    required this.team,
+    required String name,
+  }) : super(name);
+
+  @override
+  void sayHello() {
+    super.sayHello();
+    print('and I play for ${team}');
+  }
+}
+
+void main() {
+  var player = Player(
+    team: Team.blue,
+    name: 'nico',
+  );
 }
