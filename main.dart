@@ -214,7 +214,7 @@
 // }
 
 // 4.3 Named Constructors
-class Player {
+/* class Player {
   final String name;
   int xp, age;
   String team;
@@ -254,4 +254,29 @@ void main() {
   );
 
   var redPlayer = Player.createRedPlayer("nico", 21);
+}
+ */
+
+// 4.5 Cascade Notation
+class Player {
+  String name;
+  int xp;
+  String team;
+
+  Player({
+    required this.name,
+    required this.xp,
+    required this.team,
+  });
+
+  void sayHello() {
+    print("Hi my name is $name");
+  }
+}
+
+void main() {
+  var nico = Player(name: 'ico', xp: 1200, team: 'red')
+    ..name = 'las'
+    ..xp = 12000000
+    ..team = 'blue';
 }
